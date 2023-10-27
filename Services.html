@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is a Services page of Code mindscape.">
+    <title>Services | Code mindscape</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'poppins', sans-serif;
+            box-sizing: border-box;
+        }
+
+        body{
+    position: relative;
+}
+body .navBarIcons{
+    position: absolute;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    top: 20px;
+    left: 20px;
+    display: none;
+    z-index: 15;
+}
+body .navBarIcons .box{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    transition: 0.2s;
+}
+body .navBarIcons .box:hover{
+    background-color: #eeeeee;
+}
+body .navBarIcons .box img{
+    width: 30px;
+}
+nav {
+    z-index: 10;
+    position: fixed;
+    width: 100%;
+    padding: 10px 10px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    backdrop-filter: blur(10px);
+}
+
+nav .nav_left {
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav .nav_left .logoImage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav .nav_left .logoImage{
+    width: 50%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav .nav_left .logoImage .img-box img {
+    width: 70%;
+    animation-name: logoTextani;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    opacity: 0;
+}
+@keyframes logoTextani {
+    from {
+        transform: translateX(-15px);
+        opacity: 0;
+        display: none;
+    }
+
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+nav .nav_center {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav .nav_center hr{
+    opacity: 0;
+}
+
+nav .nav_center ul {
+    display: flex;
+}
+
+nav .nav_center ul li {
+    list-style: none;
+}
+
+nav .nav_center ul li a {
+    text-decoration: none;
+    color: #1f1c1c;
+    font-weight: 500;
+    font-size: 0.9em;
+    border-radius: 40px;
+    padding: 5px 15px;
+}
+
+nav .nav_right {
+    width: 10%;
+}
+
+nav .nav_right ul li {
+    list-style: none;
+}
+
+nav .nav_right ul li a {
+    text-decoration: none;
+    font-size: 0.9em;
+    background: #a340e0;
+    color: white;
+    border-radius: 40px;
+    padding: 10px 15px;
+    transition: 0.2s;
+
+}
+
+nav .nav_right ul li a:hover {
+    background-color: white;
+    box-shadow: 0 0 3px #1f1c1c24;
+    color: blueviolet;
+}
+
+
+/* Responsiveness for this Page */
+
+@media (max-width: 912px) {
+    nav{
+        opacity: 0;
+        transform: translateX(-300px);
+        transition: 0.7s;
+    }
+    nav.active {
+        opacity: 1;
+        transform: translateX(0px);
+        
+    }
+    nav{
+        height: 500px;
+        width: 200px;
+        padding: 0px 0px; 
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        background: #fcfcfc;
+        box-shadow: 0 1px 5px #2a282846;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    body .navBarIcons{
+        display: flex;
+    }
+    nav .nav_left {
+        display: none;
+
+    }
+    nav .nav_center {
+        width: 100%;
+        height: 60%;
+        display: flex;
+        flex-direction: column;
+    }
+    nav .nav_center ul{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    nav .nav_center ul li{
+        margin: 16px 0px;
+    }
+    nav .nav_center ul li a{
+        font-size: 0.8em;
+    }
+    nav .nav_right{
+        height: 5%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    nav .nav_left .logoLink .img-box{
+        display: none;
+    }
+    
+}
+@media  (max-width: 460px){
+        
+    nav{
+        width: 160px;
+
+    }
+    body .navBarIcons .box img {
+        width: 27px;
+    }
+    
+}
+body{
+    background-color: #f8eeff;
+}
+        .Services-Box {
+            min-height: 100vh;
+            width: 100%;
+            background: #fafafa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 40px;
+        }
+
+        .Services-Box .Content {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            padding: 40px 0px;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .Services-Box .Content .Text-Box {
+            height: 20%;
+            width: 100%;
+            display: flex;
+            margin: 40px 0px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .Services-Box .Content .Text-Box h3 {
+            font-size: 1.4em;
+            font-weight: 600;
+            padding: 10px 30px;
+            color: #fff;
+            border-radius: 30px;
+            background: #832ad6;
+        }
+
+        .Services-Box .Content .Ser-Boxes {
+            height: 80%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .Services-Box .Content .Ser-Boxes .box1 .Text {
+            height: 30%;
+            width: 100%;
+            color: #7323be;
+            font-size: 1.37em;
+            text-align: center;
+            font-weight: 600;
+            transition: 0.2s;
+
+        }
+
+        .Services-Box .Content .Ser-Boxes .box1 {
+            cursor: pointer;
+            height: 350px;
+            width: 250px;
+            margin: 10px 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            background: #fff;
+            padding: 20px 20px;
+            transition: 0.2s;
+            box-shadow: 0 2px 6px #9848e398;
+            z-index: 1;
+        }
+
+        .Services-Box .Content .Ser-Boxes .box1:hover {
+            background: #7323be;
+            color: #fff;
+            box-shadow: 0 2px 6px #9848e398;
+        }
+
+        .Services-Box .Content .Ser-Boxes .box1:hover .Text {
+            color: #fff;
+        }
+
+        .Services-Box .Content .Ser-Boxes .box1 .Icon {
+            height: 60%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100px;
+            transition: 0.2s;
+
+        }
+
+        .Services-Box .Content .Ser-Boxes .box1 .Icon img {
+            width: 150px;
+            transition: 0.4s;
+
+        }
+
+        .Services-Box .Content .Ser-Boxes .box1:hover .Icon img {
+            filter: invert(1);
+            transform: scale(1.1);
+            transform: rotate(5deg);
+        }
+
+        /* Code for responsiveness */
+
+        @media (max-width: 916px) {
+            .Services-Box .Content .Ser-Boxes {
+                flex-wrap: wrap;
+            }
+
+        }
+
+        @media (max-width: 880px) {
+            .Services-Box .Content .Ser-Boxes .box1 {
+                width: 280px;
+
+            }
+
+        }
+
+        @media (max-width: 679px) {
+            .Services-Box .Content .Ser-Boxes .box1 {
+                width: 270px;
+
+            }
+
+        }
+
+        @media (max-width: 660px) {
+            .Services-Box .Content .Ser-Boxes .box1 {
+                width: 250px;
+
+            }
+
+        }
+
+        @media (max-width: 620px) {
+            .Services-Box .Content .Ser-Boxes .box1 {
+                width: 300px;
+
+            }
+
+        }
+
+        @media (max-width: 460px) {
+
+            .Services-Box .Content .Ser-Boxes .box1 {
+                width: 260px;
+            }
+
+            .Services-Box .Content .Text-Box h3 {
+                font-size: 1.15em;
+
+            }
+
+            .Services-Box .Content .Ser-Boxes .box1 .Text {
+                font-size: 1.15em;
+            }
+
+            .Services-Box {
+                padding: 10px 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navBarIcons">
+        <div onclick="toggleNavBar();" class="box">
+            <img id="navIconImageChange" src="NavBar.svg" alt="">
+        </div>
+    </div>
+    <nav id="navIcon">
+        <div class="nav_left">
+            <a class="logoImage" href="index.html"><div class="img-box"><img src="logo.svg" alt="logoImage"></div></a>
+        </div>
+        <div class="nav_center">
+            <ul>
+                <li><a onclick="underline();" href="index.html">Home</a></li>
+                <li><a onclick="underline();" href="About.html">About</a></li>
+                <li><a onclick="underline();" href="Services.html">Services</a></li>
+                <li><a onclick="underline();" href="Projects  page1.html">Projects</a></li>
+            </ul>
+        </div>
+        <div class="nav_right">
+            <ul>
+                <li><a href="#">Hire Me</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="Services-Box">
+        <div class="Content">
+            <div class="Text-Box">
+                <h3>Specilize In</h3>
+            </div>
+            <div class="Ser-Boxes">
+                <div class="box1">
+                    <div class="Icon"><img src="Web Design.svg" alt="webDesignImg"></div>
+                    <div class="Text">Website UI,UX<br>Designs</div>
+                </div>
+                <div class="box1">
+                    <div class="Icon"><img src="Mern.svg" alt="mernImg"></div>
+                    <div class="Text">MERN Apps Development</div>
+                </div>
+                <div class="box1">
+                    <div class="Icon"><img src="Web Maintenance.svg" alt="webMaintenanceImg"></div>
+                    <div class="Text">Web Maintainence </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is an About page for portfolio website.">
+    <title>About | Code mindscape</title>
+    
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'poppins', sans-serif;
+            box-sizing: border-box;
+        }
+        body{
+    position: relative;
+}
+body .navBarIcons{
+    position: absolute;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    top: 20px;
+    left: 20px;
+    display: none;
+    z-index: 15;
+}
+body .navBarIcons .box{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    transition: 0.2s;
+}
+body .navBarIcons .box:hover{
+    background-color: #eeeeee;
+}
+body .navBarIcons .box img{
+    width: 30px;
+}
+nav {
+    z-index: 10;
+    position: fixed;
+    width: 100%;
+    padding: 10px 10px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    backdrop-filter: blur(10px);
+}
+
+nav .nav_left {
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav .nav_left .logoImage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav .nav_left .logoImage{
+    width: 50%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav .nav_left .logoImage .img-box img {
+    width: 70%;
+    animation-name: logoTextani;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    opacity: 0;
+}
+@keyframes logoTextani {
+    from {
+        transform: translateX(-15px);
+        opacity: 0;
+        display: none;
+    }
+
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+nav .nav_center {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav .nav_center hr{
+    opacity: 0;
+}
+
+nav .nav_center ul {
+    display: flex;
+}
+
+nav .nav_center ul li {
+    list-style: none;
+}
+
+nav .nav_center ul li a {
+    text-decoration: none;
+    color: #1f1c1c;
+    font-weight: 500;
+    font-size: 0.9em;
+    border-radius: 40px;
+    padding: 5px 15px;
+}
+
+nav .nav_right {
+    width: 10%;
+}
+
+nav .nav_right ul li {
+    list-style: none;
+}
+
+nav .nav_right ul li a {
+    text-decoration: none;
+    font-size: 0.9em;
+    background: #a340e0;
+    color: white;
+    border-radius: 40px;
+    padding: 10px 15px;
+    transition: 0.2s;
+
+}
+
+nav .nav_right ul li a:hover {
+    background-color: white;
+    box-shadow: 0 0 3px #1f1c1c24;
+    color: blueviolet;
+}
+
+
+/* Responsiveness for this Page */
+
+@media (max-width: 912px) {
+    nav{
+        opacity: 0;
+        transform: translateX(-300px);
+        transition: 0.7s;
+    }
+    nav.active {
+        opacity: 1;
+        transform: translateX(0px);
+        
+    }
+    nav{
+        height: 500px;
+        width: 200px;
+        padding: 0px 0px; 
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        background: #fcfcfc;
+        box-shadow: 0 1px 5px #2a282846;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    body .navBarIcons{
+        display: flex;
+    }
+    nav .nav_left {
+        display: none;
+
+    }
+    nav .nav_center {
+        width: 100%;
+        height: 60%;
+        display: flex;
+        flex-direction: column;
+    }
+    nav .nav_center ul{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    nav .nav_center ul li{
+        margin: 16px 0px;
+    }
+    nav .nav_center ul li a{
+        font-size: 0.8em;
+    }
+    nav .nav_right{
+        height: 5%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    nav .nav_left .logoLink .img-box{
+        display: none;
+    }
+    
+}
+@media  (max-width: 460px){
+        
+    nav{
+        width: 160px;
+
+    }
+    body .navBarIcons .box img {
+        width: 27px;
+    }
+    
+}
+body{
+    background-color: #f8eeff;
+}
+        div.main{
+            max-width: 100%;
+            margin: 0 auto;
+        }
+        .About-Box{
+            min-height: 100vh;
+            width: 100%;
+            display: flex;
+            background-image: url("About-bac.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            align-items: center;
+            justify-content: center;
+        }
+        .About-Box .Content{
+            height: 100%;
+            width: 100%;
+            padding: 50px 20px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            justify-content: center;
+        } 
+        .About-Box .Content .Image-box{
+            height: 100%;
+            width: 50%;
+            display: flex;
+            align-items: center;
+            padding: 20px 20px;
+            justify-content: center;
+        } 
+        .About-Box .Content .Image-box .img{
+            height: 320px;
+            width: 320px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        } 
+        .About-Box .Content .Image-box .img img{
+            width: 100%;
+            border-radius: 15px;
+            animation-name: imgani;
+            animation-duration: 1s;
+            animation-delay: 0.5s;
+            box-shadow: 0 1px 7px rgba(37, 15, 46, 0.252);
+            animation-iteration-count: 1;
+            opacity: 0;
+            animation-fill-mode: forwards;
+
+        } 
+        @keyframes imgani {
+            from{
+                opacity: 0;
+            }
+            to{
+                opacity: 1;
+            }
+        }
+        .About-Box .Content .Text-box{
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50%;
+            padding: 20px 20px;
+        } 
+        .About-Box .Content .Text-box .text{
+            min-height: 300px;
+            width: 100%;
+            display: flex;
+            padding: 20px 20px;
+            background: #f8f8f8;
+            border-radius: 10px;
+            box-shadow: 0 0 7px rgba(37, 15, 46, 0.252);
+            flex-direction: column;
+            justify-content: center;
+            animation-name: TextBoxani;
+            animation-duration: 1s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            opacity: 0;
+        } 
+        @keyframes TextBoxani {
+            from{
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to{
+                opacity: 1;
+                transform: translateY(0px);
+
+            }
+        }
+        .About-Box .Content .Text-box .text h2{
+            margin: 15px 0px;
+            color: #49136e;
+        } 
+        .About-Box .Content .Text-box .text h3{
+            width: 120px;
+            height: 40px;
+            padding: 5px 5px;
+            border-radius: 30px;
+            background: #49136e;
+            font-size: 0.7em;
+            font-weight: 500;
+            margin: 15px 0px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #f8f8f8;
+        } 
+        .About-Box .Content .Text-box .text img{
+            width: 20px;
+            margin: 10px 10px;
+        } 
+        .About-Box .Content .Text-box .text p{
+            font-size: 1em;
+            color: #230338;
+        } 
+        .About-Box .Content .Text-box .text b{
+            transition: 0.2s;
+            font-weight: 400;
+        } 
+        .About-Box .Content .Text-box .text:hover b{
+            font-size: 1em;
+            font-weight: 800;
+            color: #49136e;
+        } 
+
+        /* Code for responsieness */
+
+        @media (max-width: 1100px){
+        .About-Box {
+            padding: 5px 5px;
+        }
+
+
+    }
+        @media (max-width: 1050px){
+            
+        .About-Box .Content .Text-box  .text{
+            min-height: 250px;
+        } 
+        .About-Box .Content .Text-box .text h2{
+            font-size: 1.3em;
+        } 
+        .About-Box .Content .Image-box .text .img{
+            height: 320px;
+            width: 320px;
+        }
+        .About-Box .Content .Text-box .text h2{
+            font-size: 1.3em;
+        } 
+
+    }
+        @media (max-width: 1030px){
+            
+        .About-Box .Content{
+            flex-wrap: wrap;
+        }
+        .About-Box .Content .Text-box{
+            width: 100%;
+        }
+        .About-Box .Content .Text-box h2{
+            font-size: 1.3em;
+        } 
+        .About-Box .Content .Image-box {
+            width: 100%;
+        }
+        .About-Box .Content .Text-box .img{
+           height: 350px;
+           width: 350px;
+        } 
+        .About-Box .Content{
+            flex-wrap: wrap;
+            flex-direction: column-reverse;
+        }
+
+    }
+    @media (max-width: 450px) {
+
+        .About-Box .Content .Text-box{
+            width: 100%;
+            height: 100%;
+        }
+        .About-Box .Content .Text-box h2{
+            font-size: 1.3em;
+        } 
+        .About-Box .Content .Image-box {
+            width: 100%;
+            height: 100%;
+        }
+
+        .About-Box{
+            padding: 50px 0px;
+        }
+        .About-Box .Content{
+            padding: 0px 0px;
+        }
+        .About-Box .Content .Text-box .text h2{
+            font-size: 1.2em;
+        } 
+        .About-Box .Content .Text-box .text p{
+            font-size: 0.9em;
+        } 
+        .About-Box .Content .Image-box {
+            padding: 20px 0px;
+        }
+    }
+
+    </style>
+</head>
+<body>
+    <div class="navBarIcons">
+        <div onclick="toggleNavBar();" class="box">
+            <img id="navIconImageChange" src="NavBar.svg" alt="">
+        </div>
+    </div>
+    <nav id="navIcon">
+        <div class="nav_left">
+            <a class="logoImage" href="index.html"><div class="img-box"><img src="logo.svg" alt="logoImage"></div></a>
+        </div>
+        <div class="nav_center">
+            <ul>
+                <li><a onclick="underline();" href="index.html">Home</a></li>
+                <li><a onclick="underline();" href="About.html">About</a></li>
+                <li><a onclick="underline();" href="Services.html">Services</a></li>
+                <li><a onclick="underline();" href="Projects  page1.html">Projects</a></li>
+            </ul>
+        </div>
+        <div class="nav_right">
+            <ul>
+                <li><a href="#">Hire Me</a></li>
+            </ul>
+        </div>
+    </nav>
+        <div class="About-Box">
+            <div class="Content">
+               <div class="Image-box">
+                <div class="img">
+                    <img  height="360" width="200" src="My-pic.WebP" alt="personImage">
+                </div>
+               </div>
+               <div class="Text-box">
+                <div class="text">
+                    <h2>My mini intro.</h2>
+                <p>
+                    My name is <b>Mirza Usman</b>, a dedicated <b> M E R N</b> stack web developer with <b>1.5</b> yrs of hands-on experience. I've successfully completed over <b> 15+ </b> projects, showcasing my expertise in creating dynamic and user-friendly web applications. My passion for excellence drives me to find innovative solutions for every project. Let's collaborate to bring your web development ideas to life!
+                </p>
+                <h3>Hover here<img src="Mouse.svg" alt="mouseImage"></h3>
+    
+                </div>
+               </div>
+            </div>
+        </div>
+</body>
+</html>

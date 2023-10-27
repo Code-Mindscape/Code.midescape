@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'poppins', sans-serif;
+            box-sizing: border-box;
+        }
+
+        body{
+    position: relative;
+}
+body .navBarIcons{
+    position: absolute;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    top: 20px;
+    left: 20px;
+    display: none;
+    z-index: 15;
+}
+body .navBarIcons .box{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    transition: 0.2s;
+}
+body .navBarIcons .box:hover{
+    background-color: #eeeeee;
+}
+body .navBarIcons .box img{
+    width: 30px;
+}
+nav {
+    z-index: 10;
+    position: fixed;
+    width: 100%;
+    padding: 10px 10px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    backdrop-filter: blur(10px);
+}
+
+nav .nav_left {
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav .nav_left .logoImage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav .nav_left .logoImage{
+    width: 50%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav .nav_left .logoImage .img-box img {
+    width: 70%;
+    animation-name: logoTextani;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    opacity: 0;
+}
+@keyframes logoTextani {
+    from {
+        transform: translateX(-15px);
+        opacity: 0;
+        display: none;
+    }
+
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+nav .nav_center {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav .nav_center hr{
+    opacity: 0;
+}
+
+nav .nav_center ul {
+    display: flex;
+}
+
+nav .nav_center ul li {
+    list-style: none;
+}
+
+nav .nav_center ul li a {
+    text-decoration: none;
+    color: #1f1c1c;
+    font-weight: 500;
+    font-size: 0.9em;
+    border-radius: 40px;
+    padding: 5px 15px;
+}
+
+nav .nav_right {
+    width: 10%;
+}
+
+nav .nav_right ul li {
+    list-style: none;
+}
+
+nav .nav_right ul li a {
+    text-decoration: none;
+    font-size: 0.9em;
+    background: #a340e0;
+    color: white;
+    border-radius: 40px;
+    padding: 10px 15px;
+    transition: 0.2s;
+
+}
+
+nav .nav_right ul li a:hover {
+    background-color: white;
+    box-shadow: 0 0 3px #1f1c1c24;
+    color: blueviolet;
+}
+
+
+/* Responsiveness for this Page */
+
+@media (max-width: 912px) {
+    nav{
+        opacity: 0;
+        transform: translateX(-300px);
+        transition: 0.7s;
+    }
+    nav.active {
+        opacity: 1;
+        transform: translateX(0px);
+        
+    }
+    nav{
+        height: 500px;
+        width: 200px;
+        padding: 0px 0px; 
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        background: #fcfcfc;
+        box-shadow: 0 1px 5px #2a282846;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    body .navBarIcons{
+        display: flex;
+    }
+    nav .nav_left {
+        display: none;
+
+    }
+    nav .nav_center {
+        width: 100%;
+        height: 60%;
+        display: flex;
+        flex-direction: column;
+    }
+    nav .nav_center ul{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    nav .nav_center ul li{
+        margin: 16px 0px;
+    }
+    nav .nav_center ul li a{
+        font-size: 0.8em;
+    }
+    nav .nav_right{
+        height: 5%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    nav .nav_left .logoLink .img-box{
+        display: none;
+    }
+    
+}
+@media  (max-width: 460px){
+        
+    nav{
+        width: 160px;
+
+    }
+    body .navBarIcons .box img {
+        width: 27px;
+    }
+    
+}
+body{
+    background-color: #f8eeff;
+}
+        .Box {
+            min-height: 100vh;
+            width: 100%;
+            display: flex;
+            background: #fefefe;
+            align-items: center;
+            justify-content: center;
+            padding: 70px 50px;
+        }
+
+        .Box .Details-Box {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            /* align-items: center; */
+            justify-content: center;
+        }
+
+        .Box .Details-Box .Text-Box {
+            height: 80%;
+            width: 70%;
+            flex-direction: column;
+            display: flex;
+            justify-content: center;
+            padding: 20px 20px;
+            margin: 5px 5px;
+        }
+
+        .Box .Details-Box .Text-Box .Project-Name {
+            font-size: 2.1em;
+            font-weight: 700;
+            color: #6d6d6d;
+        }
+
+        .Box .Details-Box .Text-Box .Details-Text {
+            font-size: 1.4em;
+            font-weight: 600;
+            color: #6d6d6d;
+        }
+
+        .Box .Details-Box .Images-Box {
+            height: 20%;
+            width: 100%;
+            padding: 5px 5px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .Box .Details-Box .Images-Box .Download-Box {
+            cursor: pointer;
+            width: 20%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .Box .Details-Box .Images-Box .Download-Button {
+            padding: 10px 15px;
+            border-radius: 30px;
+            background: #8A2BE2;
+            box-shadow: 0 3px 6px #c281ff;
+            flex-direction: row;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            justify-content: center;
+        }
+        .Box .Details-Box .Images-Box .Download-Button:hover{
+            background: #983af0;
+
+        }
+        .Box .Details-Box .Images-Box .Download-Button a {
+            font-weight: 400;
+            color: #fff;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+
+        .Box .Details-Box .Images-Box .Download-Button .Icon-Box {
+            height: 30px;
+            width: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: #fff;
+        }
+
+        .Box .Details-Box .Images-Box .Download-Button .Icon-Box img {
+            width: 10px;
+        }
+        .Box .Details-Box .Images-Box .Images{
+            height: 100%;
+            width: 80%;
+            padding: 5px 5px;
+            flex-direction: row;
+            display: flex;
+            justify-content: center;
+            border: 1px solid #b1b1b1de;
+            border-radius: 10px;
+        }
+        .Box .Details-Box .Images-Box .Images .img1{
+            height: 100px;
+            width: 100px;
+            border-radius: 5px;
+            background: #9c9c9c;
+            margin: 5px 5px;
+            cursor: pointer;
+        }
+        .Box .Details-Box .Images-Box .Images .img1:hover{
+            background: #e0e0e0;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navBarIcons">
+        <div onclick="toggleNavBar();" class="box">
+            <img id="navIconImageChange" src="NavBar.svg" alt="">
+        </div>
+    </div>
+    <nav id="navIcon">
+        <div class="nav_left">
+            <a class="logoImage" href="index.html"><div class="img-box"><img src="logo.svg" alt="logoImage"></div></a>
+        </div>
+        <div class="nav_center">
+            <ul>
+                <li><a onclick="underline();" href="index.html">Home</a></li>
+                <li><a onclick="underline();" href="About.html">About</a></li>
+                <li><a onclick="underline();" href="Services.html">Services</a></li>
+                <li><a onclick="underline();" href="Projects  page1.html">Projects</a></li>
+            </ul>
+        </div>
+        <div class="nav_right">
+            <ul>
+                <li><a href="#">Hire Me</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="Box">
+        <div class="Details-Box">
+            <div class="Text-Box">
+                <h2 class="Project-Name">Spotify Clone</h2>
+                <h3 class="Details-Text">Details</h3>
+                <p>Exercitationem delectus minus autem perferendis voluptatum odit enim dolore sunt qui veritatis eaque
+                    iusto, eveniet ad saepe nemo hic dicta expedita consectetur debitis, explicabo repellendus rerum
+                    aspernatur iste fugiat! Ratione, natus.<br>
+                    Id, cum? Nostrum placeat, officia sit autem dignissimos adipisci rem modi, numquam repellat
+                    laboriosam nobis non fuga libero ipsa accusantium eos illum labore nesciunt obcaecati commodi.
+                    Repudiandae maiores minima dicta at earum! Optio eos asperiores tempore eum sunt dolore nihil
+                    quisquam ut, autem non vero, assumenda repudiandae ad distinctio aliquid quos, velit et voluptates
+                    blanditiis.</p>
+                <p>Exercitationem delectus minus autem perferendis voluptatum odit enim dolore sunt qui veritatis eaque
+                    iusto, eveniet ad saepe nemo hic dicta expedita consectetur debitis, explicabo repellendus rerum
+                    aspernatur iste fugiat! Ratione, natus.<br>
+                    Id, cum? Nostrum placeat, officia sit autem dignissimos adipisci rem modi, numquam repellat
+                    laboriosam nobis non fuga libero ipsa accusantium eos illum labore nesciunt obcaecati commodi.
+                    Repudiandae maiores minima dicta at earum! Opti.</p>
+            </div>
+            <div class="Images-Box">
+                <div class="Download-Box">
+                    <div class="Download-Button"><a href="">Source Code</a>
+                        <div class="Icon-Box"><img src="Download-Icon.svg" alt=""></div>
+                    </div>
+                </div>
+                <div class="Images">
+                    <a href="Projects  page3.html"><div class="img1"></div></a>
+                    <div class="img1"></div>
+                    <div class="img1"></div>
+                    <div class="img1"></div>
+                    <div class="img1"></div>
+                    <div class="img1"></div>
+                    <div class="img1"></div>
+                    <div class="img1"></div>
+                    <div class="img1"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

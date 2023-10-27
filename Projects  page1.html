@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is a Projects page of Code mindscape.">
+    <title>Projects | Code mindscape</title>
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'poppins', sans-serif;
+            box-sizing: border-box;
+        }
+        body{
+    position: relative;
+}
+body .navBarIcons{
+    position: absolute;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    top: 20px;
+    left: 20px;
+    display: none;
+    z-index: 15;
+}
+body .navBarIcons .box{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    transition: 0.2s;
+}
+body .navBarIcons .box:hover{
+    background-color: #eeeeee;
+}
+body .navBarIcons .box img{
+    width: 30px;
+}
+nav {
+    z-index: 10;
+    position: fixed;
+    width: 100%;
+    padding: 10px 10px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    backdrop-filter: blur(10px);
+}
+
+nav .nav_left {
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav .nav_left .logoImage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav .nav_left .logoImage{
+    width: 50%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav .nav_left .logoImage .img-box img {
+    width: 70%;
+    animation-name: logoTextani;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    opacity: 0;
+}
+@keyframes logoTextani {
+    from {
+        transform: translateX(-15px);
+        opacity: 0;
+        display: none;
+    }
+
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+nav .nav_center {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav .nav_center hr{
+    opacity: 0;
+}
+
+nav .nav_center ul {
+    display: flex;
+}
+
+nav .nav_center ul li {
+    list-style: none;
+}
+
+nav .nav_center ul li a {
+    text-decoration: none;
+    color: #1f1c1c;
+    font-weight: 500;
+    font-size: 0.9em;
+    border-radius: 40px;
+    padding: 5px 15px;
+}
+
+nav .nav_right {
+    width: 10%;
+}
+
+nav .nav_right ul li {
+    list-style: none;
+}
+
+nav .nav_right ul li a {
+    text-decoration: none;
+    font-size: 0.9em;
+    background: #a340e0;
+    color: white;
+    border-radius: 40px;
+    padding: 10px 15px;
+    transition: 0.2s;
+
+}
+
+nav .nav_right ul li a:hover {
+    background-color: white;
+    box-shadow: 0 0 3px #1f1c1c24;
+    color: blueviolet;
+}
+
+
+/* Responsiveness for this Page */
+
+@media (max-width: 912px) {
+    nav{
+        opacity: 0;
+        transform: translateX(-300px);
+        transition: 0.7s;
+    }
+    nav.active {
+        opacity: 1;
+        transform: translateX(0px);
+        
+    }
+    nav{
+        height: 500px;
+        width: 200px;
+        padding: 0px 0px; 
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        background: #fcfcfc;
+        box-shadow: 0 1px 5px #2a282846;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    body .navBarIcons{
+        display: flex;
+    }
+    nav .nav_left {
+        display: none;
+
+    }
+    nav .nav_center {
+        width: 100%;
+        height: 60%;
+        display: flex;
+        flex-direction: column;
+    }
+    nav .nav_center ul{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    nav .nav_center ul li{
+        margin: 16px 0px;
+    }
+    nav .nav_center ul li a{
+        font-size: 0.8em;
+    }
+    nav .nav_right{
+        height: 5%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    nav .nav_left .logoLink .img-box{
+        display: none;
+    }
+    
+}
+@media  (max-width: 460px){
+        
+    nav{
+        width: 160px;
+
+    }
+    body .navBarIcons .box img {
+        width: 27px;
+    }
+    
+}
+body{
+    background-color: #f8eeff;
+}
+        .Box{
+            min-height: 100vh;
+            width: 100%;
+            /* background-image: url("../images/Project_Background.png");
+            background-repeat: no-repeat;
+            background-size: cover; */
+            background: #fafafa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0px 50px;
+        }
+        .Box .Box-Content{
+            position: relative;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .Box .Box-Content .LeftArrow{
+            cursor: pointer;
+            background: #38234c;
+            color: #fff;
+            font-size: 2em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+        }
+        .Box .Box-Content .RightArrow{
+            cursor: pointer;
+            background: #38234c;
+            color: #fff;
+            font-size: 2em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+            position: absolute;
+            right: 0;
+        }
+        .Box .Box-Content .section1{
+            width: 50%;
+            height: 100%;
+            padding-left: 150px;
+        }
+        .Box .Box-Content .section1 .projectNumber{
+            font-size: 1.2em;
+            color: #7507b9;
+        }
+        .Box .Box-Content .section1 .projectName{
+            font-size: 4em;
+            color: #600896 ;
+            line-height: 70px;
+        }
+        .Box .Box-Content .section1 .readMoreContent{
+            display: flex;
+            align-items: center;
+            margin-top: 30px;
+        }
+        .Box .Box-Content .section1 .readMoreContent .readMore{
+            font-size: 1em;
+            color: #8a2be2;
+        }
+        .Box .Box-Content .section1 .readMoreContent .readIcon {
+            padding: 10px 20px;
+            border-radius: 20px;
+            background: #8a2be2;
+            margin: 0 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        .Box .Box-Content .section1 .readMoreContent .readIcon:hover{
+            background: #7926c7;
+
+        }
+        .Box .Box-Content .section1 .readMoreContent .readIcon svg{
+            width: 35px;
+        }
+
+        /* Section 2 Starts Here.... */
+
+        .Box .Box-Content .section2{
+            width: 50%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .Box .Box-Content .section2 .imageContent{
+            position: relative;
+            width: 400px;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .Box .Box-Content .section2 .imageContent .imageBox{
+            height: 320px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 320px;
+            border-radius: 30px;
+            transform: rotate(-15deg);
+            background: #290847;
+            z-index: 1;
+        }
+        .Box .Box-Content .section2 .imageContent .imageBox::before{
+            content: '';
+            position: absolute;
+            height: 320px;
+            width: 320px;
+            border-radius: 30px;
+            background: #8523e06e;
+            transform: rotate(15deg);
+            z-index: -1;
+        }
+        .Box .Box-Content .section2 .imageContent .imageBox svg{
+            width: 60px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navBarIcons">
+        <div onclick="toggleNavBar();" class="box">
+            <img id="navIconImageChange" src="NavBar.svg" alt="">
+        </div>
+    </div>
+    <nav id="navIcon">
+        <div class="nav_left">
+            <a class="logoImage" href="index.html"><div class="img-box"><img src="logo.svg" alt="logoImage"></div></a>
+        </div>
+        <div class="nav_center">
+            <ul>
+                <li><a onclick="underline();" href="index.html">Home</a></li>
+                <li><a onclick="underline();" href="About.html">About</a></li>
+                <li><a onclick="underline();" href="Services.html">Services</a></li>
+                <li><a onclick="underline();" href="Projects  page1.html">Projects</a></li>
+            </ul>
+        </div>
+        <div class="nav_right">
+            <ul>
+                <li><a href="#">Hire Me</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="Box">
+        <div class="Box-Content">
+            <div class="LeftArrow"><</div>
+            <div class="RightArrow">></div>
+            <div class="section1">
+                <span class="projectNumber">Project # 1</span>
+                <h1 class="projectName">Spotify Clone</h1>
+                <div class="readMoreContent"><span class="readMore">Read more</span><a href="Projects  page2.html" class="readIcon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 109.84 56.17"><defs><style>.a{fill:#fff;}</style></defs><path class="a" d="M117.87,32.65h0a2.35,2.35,0,0,1,0,.26v0a1.57,1.57,0,0,1,0,.23,1.68,1.68,0,0,1-.09.32,1.55,1.55,0,0,1-.08.23l-.08.16v0a.86.86,0,0,1-.1.16,1.94,1.94,0,0,1-.21.29h0l-21.37,25a2.6,2.6,0,0,1-3.68.29A2.62,2.62,0,0,1,91.9,56l17.71-20.71h-99a2.61,2.61,0,0,1,0-5.22h98.8L90.12,8.46A2.61,2.61,0,0,1,94,5l23.16,25.89a2.73,2.73,0,0,1,.33.43l0,.09a1.51,1.51,0,0,1,.09.18,1.72,1.72,0,0,1,.1.26.83.83,0,0,1,.06.21l0,.11,0,.23A2.44,2.44,0,0,1,117.87,32.65Z" transform="translate(-8.04 -4.11)"/><path class="a" d="M117.21,30.91a2.19,2.19,0,0,1,.29.39,2.73,2.73,0,0,0-.33-.43Z" transform="translate(-8.04 -4.11)"/></svg></a></div>
+                
+            </div>
+            <div class="section2">
+                <div class="imageContent">
+                    <div class="imageBox"><svg fill="#ffffff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2.25A9.75 9.75 0 1 0 21.75 12 9.769 9.769 0 0 0 12 2.25Zm3.412 10.378-4.5 3a.816.816 0 0 1-.412.122.796.796 0 0 1-.356-.084A.75.75 0 0 1 9.75 15V9a.75.75 0 0 1 .394-.666.778.778 0 0 1 .768.038l4.5 3a.75.75 0 0 1 0 1.256Z"></path>
+                      </svg></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
